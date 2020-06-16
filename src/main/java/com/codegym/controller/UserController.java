@@ -18,10 +18,10 @@ public class UserController {
     }
 
     @GetMapping("user")
-    public ModelAndView user(Principal principal){
+    public String user(Principal principal){
         System.out.println(principal.getName());
-        ModelAndView modelAndView = new ModelAndView("user");
-        return modelAndView;
+        //ModelAndView modelAndView = new ModelAndView("user");
+        return "user";
     }
 
     @GetMapping("admin")
